@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Accordion</title>
+  </head>
+  <body class="m-0 p-0 overflow-hidden">
+    <div
+      class="bg-purple-100 flex flex-col items-center min-h-screen w-screen p-0 m-0"
+    >
+      <div
+        class="relative h-65 w-screen cursor-pointer bg-[url('/assets/images/background-pattern-mobile.svg')] bg-no-repeat bg-cover 6xl:bg-[url('/assets/images/background-pattern-dektop.svg')]"
+      ></div>
+      <main class="font-sans absolute top-45 w-80 z-[10] bg-[#fff] rounded-xl">
+        <h1 class="text-[32px] gap-3 font-extrabold flex p-5">
+          <img class="h-8 w-10 mt-2" src="assets/images/icon-star.svg" />FAQs
+        </h1>
+        <div class="my-2">
+          <div class="flex px-5 gap-1">
+            <h2 class="hover:text-purple-500 font-bold">
+              What is Frontend Mentor, and how will it help me?
+            </h2>
+            <span
+              class="minus h-10 w-12 bg-[url('assets/images/icon-plus.svg')] bg-no-repeat"
+            ></span>
+          </div>
+          <p class="hidden text-[16px] opacity-45 me-7 ms-5 pb-2">
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS, JavaScript. It's suitable for all levels and ideal for
+            portfolio building.
+          </p>
+        </div>
+        <div class="my-2">
+          <div class="flex px-5 gap-1 justify-between ">
+            <h2 class="hover:text-purple-500 font-bold">
+              Is Frontend Mentor Free?
+            </h2>
+            <span
+              class="minus h-10 w-8 bg-[url('assets/images/icon-plus.svg')] bg-no-repeat"
+            ></span>
+          </div>
+          <p class="hidden text-[16px] opacity-45 me-7 ms-5 pb-2">
+            Yes, it is free.
+          </p>
+        </div>
+        <div class="my-2">
+          <div class="flex px-5 gap-1">
+            <h2 class="hover:text-purple-500 font-bold">
+              Can i use Frontend Mentor Projects in Portfolio ?
+            </h2>
+            <span
+              class="minus h-10 w-12 bg-[url('assets/images/icon-plus.svg')] bg-no-repeat"
+            ></span>
+          </div>
+          <p class="hidden text-[16px] opacity-45 me-7 ms-5 pb-2">
+            Yes you can.
+          </p>
+        </div>
+        <div class="my-2">
+          <div class="flex px-5 gap-1">
+            <h2 class="hover:text-purple-500 font-bold">
+              How can i get help if i am stuck on a challenge ?
+            </h2>
+            <span
+              class="minus h-10 w-12 bg-[url('assets/images/icon-plus.svg')] bg-no-repeat"
+            ></span>
+          </div>
+          <p class="hidden text-[16px] opacity-45 me-7 ms-5 pb-2">
+            You can contact <link href="linkedin/in/khadarbashajilan">me</link>
+          </p>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    document.body.addEventListener("click", (e) => {
+      if (e.target.classList.contains("minus")) {
+        e.target.classList.toggle("bg-[url('assets/images/icon-minus.svg')]");
+        e.target.classList.toggle("bg-[url('assets/images/icon-plus.svg')]");
+        let p = e.target.parentElement.nextElementSibling;
+        console.log(p);
+        p.classList.toggle("hidden");
+        console.log(p);
+      }
+    });
+  </script>
+</html>
